@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'homework1'
+version '1.0-SNAPSHOT'
+
+application{
+    mainClassName = 'homework1.Provider'
+}
+compileJava {
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+}
+dependencies {
+    // This dependency is used by the application.
+    implementation 'com.google.guava:guava:31.1-jre'
+    implementation 'javax.xml.ws:jaxws-api:2.3.1'
+    implementation 'javax.jws:javax.jws-api:1.1'
+    implementation 'com.sun.xml.ws:jaxws-rt:3.0.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+
+repositories {
+    mavenCentral()
+}
